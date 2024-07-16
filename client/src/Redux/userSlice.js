@@ -3,7 +3,7 @@ import axios from "axios";
 
 export const getuser = createAsyncThunk("user/get", async (req, res) => {
   try {
-    let result = axios.get("http://localhost:5001/user/");
+    let result = axios.get("https://contactlist-xi.vercel.app/user/");
     return result;
   } catch (error) {
     console.log(error);
@@ -12,7 +12,7 @@ export const getuser = createAsyncThunk("user/get", async (req, res) => {
 
 export const adduser = createAsyncThunk("user/add", async (newuser) => {
   try {
-    let result = axios.post("http://localhost:5001/user/add", newuser);
+    let result = axios.post("https://contactlist-xi.vercel.app/user/add", newuser);
     return result;
   } catch (error) {
     console.log(error);
@@ -21,7 +21,7 @@ export const adduser = createAsyncThunk("user/add", async (newuser) => {
 
 export const deleteuser = createAsyncThunk("user/delete", async (id) => {
   try {
-    let result = axios.delete(`http://localhost:5001/user/${id}`);
+    let result = axios.delete(`https://contactlist-xi.vercel.app/user/${id}`);
     return result;
   } catch (error) {
     console.log(error);
@@ -30,7 +30,7 @@ export const deleteuser = createAsyncThunk("user/delete", async (id) => {
 
 export const edituser = createAsyncThunk("user/edit", async ({ id, edit }) => {
   try {
-    let result = axios.put(`http://localhost:5001/user/${id}`, edit);
+    let result = axios.put(`https://contactlist-xi.vercel.app/user/${id}`, edit);
     return result;
   } catch (error) {
     console.log(error);
